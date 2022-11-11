@@ -9,7 +9,7 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Func;
+namespace Extensions;
 
 using System;
 using System.Security.Cryptography;
@@ -157,22 +157,6 @@ public static class CryptographyExtensions
         if (value is not { Length: > 0 })
         {
             throw new ArgumentNullException(paramName, $"The array value can't be null or empty. (Parameter name: '{paramName ?? string.Empty}').");
-        }
-    }
-
-    private static void ThrowIfNullOrEmpty(this string? text, string? paramName)
-    {
-        if (string.IsNullOrEmpty(text))
-        {
-            throw new ArgumentNullException(paramName, $"The string value can't be null or empty. (Parameter name: '{paramName ?? string.Empty}').");
-        }
-    }
-
-    private static void ThrowIfNull(this object? obj, string? paramName)
-    {
-        if (obj is null)
-        {
-            throw new ArgumentNullException(paramName, $"The value can't be null. (Parameter name: '{paramName ?? string.Empty}').");
         }
     }
 }

@@ -9,7 +9,7 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Func;
+namespace Extensions;
 
 using System;
 using System.Collections.Generic;
@@ -70,7 +70,7 @@ public static class GenericExtensions
     /// <typeparam name="T"> The type of object. </typeparam>
     /// <param name="value"> The object to check.  </param>
     /// <returns> Returns <b>true</b> if object value is not null or not DBNull, otherwise <b>false</b>. </returns>
-    public static bool IsNotNull<T>(this T value)
+    public static bool IsNotNull<T>([NoEnumeration] this T value)
     {
         return !IsNull(value);
     }
@@ -154,7 +154,7 @@ public static class GenericExtensions
     /// <param name="paramName"> The name of the parameter that caused the exception. </param>
     /// <returns> The unchanged value. </returns>
     /// <exception cref="ArgumentNullException"> Throw when value is null. </exception>
-    public static T ThrowIfNull<T>(this T? value, string? paramName = default)
+    public static T ThrowIfNull<T>([NoEnumeration] this T? value, string? paramName = default)
     {
         return value ?? throw new ArgumentNullException(paramName, $"The value can't be null. (Parameter name: '{paramName ?? string.Empty}').");
     }

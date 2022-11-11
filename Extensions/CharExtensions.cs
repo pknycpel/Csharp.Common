@@ -9,7 +9,7 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Func;
+namespace Extensions;
 
 using System.Linq;
 using JetBrains.Annotations;
