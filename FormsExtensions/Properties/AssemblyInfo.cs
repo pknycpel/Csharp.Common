@@ -1,5 +1,15 @@
-﻿using System.Reflection;
-using System.Runtime.CompilerServices;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="AssemblyInfo.cs" company="None">
+//      This project is licensed under the Apache License 2.0.
+// </copyright>
+// <author> Piotr Knycpel </author>
+// <creationDate> 2022-11-12 10:59 </creationDate>
+// <summary>
+//      Defines the AssemblyInfo type.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
+
+using System.Reflection;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following
